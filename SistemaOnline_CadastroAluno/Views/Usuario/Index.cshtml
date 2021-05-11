@@ -1,0 +1,74 @@
+﻿@{
+    
+    List<Estrutura.Usuario> usuarios = ViewBag.Usuarios;
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+}
+<script>
+    var ValidaExclusao = function (id, evento) {
+        if (confirm("Tem certeza que deseja excluir esse cadastro?")) {
+            return true;
+        }
+        else {
+            evento.preventDefault();
+            return false;
+        }
+    }
+</script>
+<link href="~/Estilo/Estilo.css" rel="stylesheet" />
+<title>Sistema de Cadastros</title>
+
+@if (TempData["Sucesso"] != null)
+{
+    <div>@TempData["Sucesso"]</div>
+}
+@if (TempData["Erro"] != null)
+{
+    <div>@TempData["Erro"]</div>
+}
+<div>
+    <h3>Alunos cadastrados</h3>
+    <div>
+        <a href="/usuario/novo">Me Cadastrar</a>
+    </div>
+    <table class="table">
+
+
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>          
+            <th>Cpf</th>           
+            <th>Sexo</th>           
+            <th>Data de cadastro</th>        
+            <th>Telefone</th>
+            <th>Cidade</th>           
+            <th></th>
+            <th></th>
+        </tr>
+
+
+        @foreach (var p in usuarios)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Nome</td>
+                <td>@p.Cpf</td>
+                <td>@p.Sexo</td>
+                <td>@p.DataCadastro</td>
+                <td>@p.Telefone</td>
+                <td>@p.Cidade</td>
+                <td></td>
+                <td></td>
+                
+                <td>
+                    <a href="/usuario/@p.Id/editar">Alterar dados</a>
+                </td>
+                <td>
+                    <a href="/usuario/@p.Id/excluir" onclick="ValidaExclusao(@p.Id, event)">Excluir dados</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

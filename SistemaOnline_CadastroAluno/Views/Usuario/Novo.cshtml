@@ -1,0 +1,70 @@
+﻿<title>Me Cadastrar</title>
+
+<div>
+    <h3>Me cadastrar</h3>
+    <div>
+        <a href="/usuario">Voltar</a>
+    </div>
+    <form action="/usuario/criar" method="post">
+        <div class="">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" autofocus />
+            <label for="rg">RG</label>
+            <input id="rg" type="text" name="rg" />
+            <label for="cpf">CPF</label>
+            <input id="cpf" type="text" name="cpf" />
+            <label for="datanascimento">Data de nascimento</label>
+            <input id="datanascimento" type="date" name="datanascimento"/>
+            <label for="cep">CEP</label>
+            <input id="cep" type="text" name="cep" value="" />
+            <label for="endereco">Endereço</label>
+            <input id="endereco" type="text" name="endereco" value="" />
+            <label for="bairro">Bairro</label>
+            <input id="bairro" type="text" name="bairro" value="" />
+            <label for="uf">Estado</label>
+            <select id="uf" name="estado" value="">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+            <label for="idade">Idade</label>
+            <input id="idade" type="text" name="idade" />
+            <label for="sexo">Sexo</label>
+            <select id="sexo" name="sexo">
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+            </select>
+            <label for="email">E-mail</label>
+            <input id="email" type="email" name="email"/>
+            <label for="telefone">Telefone</label>
+            <input id="telefone" name="telefone" type="text"/>
+            <label for="senha">Cadastrar Senha</label>
+            <input id="senha" type="text" name="senha" />
+        </div>
+        <input type="submit" value="Cadastrar" />
+    </form>
+</div>
